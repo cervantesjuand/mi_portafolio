@@ -1,0 +1,100 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: ufc;
+}
+@font-face {
+    font-family: ufc;
+    src: url("../fuentes/netflix.ttf");
+}
+.nav-menu {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+.burguer {
+    display: none;
+}
+.logo {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    margin: 20px 80px;
+}
+.menu {
+    float: right;
+    display: flex;
+    gap: 20px;
+    margin: 21px 50px;
+}
+.menu li a {
+    font-size: 28px;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: 300ms;
+}
+.menu li a:hover {
+    background-color: red;
+}
+section {
+    background-image: url("../imagenes/mcgregor.webp");
+    background-size: cover;
+    height:  calc(100vh - 80px);
+}
+@media (max-width: 1000px){
+    section {
+        background-image: url("../imagenes/diamon.jpg");
+        background-size: cover;
+    }
+    
+}
+@media (max-width: 940px){
+    
+    .logo{
+        margin-left: 30px;
+        float: none;
+    }
+    .burguer {
+        display: block;
+        font-size: 40px;
+        color: white;
+        float: right;
+        margin: 10px 50px;
+        cursor: pointer;
+    }
+    .burguer:hover {
+        color: red;
+    }
+    .menu-media-hidden {
+        display: none;
+    }
+    .menu-media-visible {
+        margin-top: 80px;
+        margin-left: 0%;
+        display: block;
+        position: absolute;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.589);
+        text-align: center;
+        border-bottom: 2px solid black;
+        transition: all 300ms;
+    }
+    .items {
+        margin-top: 25px;
+        font-size: 35px;
+        padding: 5px 5px;
+    }
+    .menu li a:hover {
+        color: red;
+        background-color: transparent;
+    }
+}
+
+
+

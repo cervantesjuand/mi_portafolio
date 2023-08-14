@@ -1,0 +1,116 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    font-family: mma;
+}
+@font-face {
+    font-family: mma;
+    src: url("../fuentes/netflix.ttf");
+}
+body {
+    min-height: 100vh;
+    background-image: url("../imagenes/paisaje.2.jpg");
+    background-size: cover;
+    background-position: center;
+    height:  calc(100vh - 80px);
+}
+header {
+    position: fixed;
+    top: 0%; left: 0%; right: 0;
+    background-color: #ffffff;
+    padding:0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #fff;
+    display: none;
+}
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgb(0, 0, 0, .1) ;
+}
+header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:900px){
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0%; right: 0%;
+        background-color: #fff;
+        border-top: 1px solid rgb(0, 0, 0,.1);
+        display: none;
+    }
+    header .navbar ul li {
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background-color: #eee;
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0%;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+
+}
+
+
+
+

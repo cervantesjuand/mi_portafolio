@@ -1,0 +1,114 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: net;
+}
+@font-face {
+    font-family: net;
+    src: url("../fuentes/netflix.ttf");
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+.l {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 80px;
+}
+.valores {
+    width: 130px;
+    height: 350px;
+}
+.valores p{
+    font-size: 20px;
+}
+.valor1 {
+    margin-top: -5px;
+}   
+.valor2{
+    margin-top: 105%;
+}
+.valor3 {
+    margin-top: 113%;
+}
+.grafico {
+    width: 550px;
+    height: 350px;
+    border: 2px solid black;
+    border-top: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.disco-1, .disco-2, .disco-3, .disco-4, .disco-5{
+    width: 70px;
+    margin-left: 25px;
+}
+.disco-1 {
+    height: 65%;
+    background-color: red;
+}
+.disco-2 {
+    height: 50%;
+    background-color: darkcyan  ;
+}
+.disco-3 {
+    height: 45%;
+    background-color: goldenrod;
+}
+.disco-4 {
+    height: 43%;
+    background-color: darkgreen;
+}
+.disco-5 {
+    height: 42%;
+    background-color: darkslategray;
+}
+.nombres {
+    margin-left: 80px;
+    width: 400px;
+    height: 100px;
+}
+.nom {
+    display: flex;
+    margin-top: 10px;
+}
+.color1, .color2, .color3, .color4, .color5 {
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+.color1 {
+    background-color: red;
+}
+.color2 {
+    background-color: darkcyan;
+}
+.color3 {
+    background-color: goldenrod;
+}
+.color4 {
+    background-color: darkgreen;
+}
+.color5 {
+    background-color: darkslategrey;
+}
+h2 {
+    margin-left: 10px;
+}
+
+@media (max-width: 1920px){
+
+    .l {
+        margin-left: 450px;
+        margin-top: 200px;
+    }
+   .valores {
+        
+   }
+   
+}

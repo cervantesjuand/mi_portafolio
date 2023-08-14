@@ -1,0 +1,15 @@
+body {
+    background-image: url("../imagenes/gamefonod.jpeg");
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    margin-top: 290px;
+    font-size: 60px;
+    color: gray;
+    font-family: game;
+}
+@font-face {
+    font-family: game;
+    src: url("../fuentes/Game\ of\ Thrones.ttf");
+}

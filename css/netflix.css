@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    margin-top: 250px;
+    background-color: black;
+}
+h1 {
+    color: red;
+    font-size: 120px;
+    font-family: netflix;
+}
+@font-face {
+    font-family: netflix;
+    src: url("../fuentes/netflix.ttf");
+}

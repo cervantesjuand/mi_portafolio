@@ -1,0 +1,164 @@
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding-top: 50px;
+    font-family: holly ;  
+    display: flex;
+    justify-content: center;  
+}
+.paquete {
+    height: 120px;
+    width: 120px;
+    border: 3px solid #cacaca;
+    border-top: none;
+    border-left: none;
+    background-color: #008b8b;
+    border-top-left-radius: 50px;
+    font-family: Hollywood;
+    color: white;
+    font-size: 25px;
+}
+@font-face {
+    font-family: Hollywood;
+    src: url("../fuentes/HollywoodHills.ttf");
+}
+.programación {
+    height: 120px;
+    width: 250px;
+    border: 3px solid #cacaca;
+    border-top: none;
+    background-color: #008b8b;
+    font-family: Hollywood;
+    color: white;
+    font-size: 25px;
+}
+.box-1 {
+    height: 120px;
+    width: 140px;
+    border: 3px solid #cacaca;
+    border-top: none;
+    background-color: #0c9b4c;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+@font-face {
+    font-family: net;
+    src: url("../fuentes/netflix.ttf");
+}
+.box-2{
+    height: 120px;
+    width: 140px;
+    border: 3px solid #cacaca;
+    background-color: #42a7ff;
+    border-top: none;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+.box-3 {
+    height: 120px;
+    width: 170px;
+    border: 3px solid #cacaca;
+    border-top: none;
+    background-color: #ff7b00;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+.box-4 {
+    height: 120px;
+    width: 190px;
+    border: 3px solid #cacaca;
+    background-color: #550662;
+    border-top: none;
+    border-right: none;
+    border-top-right-radius: 20px;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+.no-aplica {
+    height: 95px;
+    width: 90px;
+    border: 3px solid #cacaca;
+    border-left: none;
+    background-color: #008b8b;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+.discovery {
+    height: 95px;
+    width: 250px;
+    border: 3px solid #cacaca;
+    background-color: #008b8b;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+.si{
+    border: 3px solid #cacaca;
+    font-family: net;
+    font-size: 25px;
+    background-color: #f0f0f0;
+}
+.no-aplica2 {
+    height: 50px;
+    width: 70px;
+    border: 3px solid #cacaca;
+    border-left: none;
+    background-color: #008b8b;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+.hbo {
+    border: 3px solid #cacaca;
+    background-color: #008b8b;
+    border-bottom-left-radius: 20px;
+    border-left: none;
+    border-bottom: none;
+    font-family: net;
+    color: white;
+    font-size: 33px;
+}
+.programa {
+    height: 70px;
+    width: 250px;
+    border: 3px solid #cacaca;
+    background-color: #008b8b;
+    font-family: net;
+    color: white;
+    font-size: 25px;
+}
+.nota-1 {
+    height: 70px;
+    width: 140px;
+    border: 3px solid #cacaca; 
+    font-family: net;
+    font-size: 25px;
+    background-color: #f0f0f0;
+}
+.fa-x{
+    color: red;
+}
+.fa-check {
+    color: green;
+}
+.nota-3 {
+    height: 70px;
+    width: 170px;
+    border: 3px solid #cacaca;
+    font-family: net;
+    font-size: 25px;
+    background-color: #f0f0f0;
+}
+.nota-4 {
+    height: 70px;
+    width: 190px;
+    border: 3px solid #cacaca;
+    font-family: net;
+    font-size: 25px;
+    background-color: #f0f0f0;
+}

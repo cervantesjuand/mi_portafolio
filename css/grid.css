@@ -1,0 +1,109 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.titulo {
+    width: 700px;
+    height: 110px;
+    margin: 50px auto;
+    background-color: #81abff91;
+    border-radius: 20px;
+}
+@font-face {
+    font-family: titulo;
+    src: url("../fuentes/Pacifico-Regular.ttf");
+}
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 70px;
+    color: black;
+    font-family: titulo;
+    font-weight: 700;
+}
+.l {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendario {
+    margin-top: 30px;
+    display: grid;
+    width: 1300px;
+    height: 680px;
+    color: black;
+    font-size: 1.3em;
+    border-top: 5px solid #ddad34;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 15px;
+    font-size: 28px;
+}
+.dias {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #008b8b;
+    color: aliceblue;
+    font-size: 25px;
+}
+.box-f {
+    background-color: #ee458e;
+    display: flex;
+    color: #f2f4eb;
+    font-size: 28px;
+}
+.box-f .fecha {
+    margin-left: 31px;
+    display: flex;
+    align-items: flex-end;
+    font-size: 21px;
+}
+.style-box {
+    display: flex;
+    justify-content: left;
+    background-color: #f2f4eb;
+}
+.mini-box-1 {
+    grid-column-start: 4;
+}
+
+@media (max-width: 1350px) {
+    .calendario {
+        width: 1000px;
+        height: 550px;
+        font-size: 22px;
+    }
+    .dias {
+        font-size: 22px;
+    }
+    .box-f {
+        font-size: 22px;
+    }
+    .box-f .fecha {
+        font-size: 17px;
+        margin-left: 15px;
+    }
+}
+@media (max-width: 1044px) {
+    h1 {
+        font-size: 50px;
+    }
+    .calendario {
+        width: 800px;
+        height: 450px;
+        font-size: 16px;
+    }
+    .dias {
+        font-size: 16px;
+    }
+    .box-f {
+        font-size: 16px;
+    }
+    .box-f .fecha {
+        font-size: 15px;
+        margin-left: 5px;
+    }
+}

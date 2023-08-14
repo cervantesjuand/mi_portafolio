@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <script src="../js/formulario.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="form-box">
+        <form>
+            <legend class="legend-text">Vuelos internacionales</legend>
+            <br>
+            <br>
+            <label>Ingrese número de docmuento</label>
+            <br>
+            <input type="text" name="No.Docmuento" placeholder="Digite documento">
+            <br>
+            <label>Ingrese los nombres</label>
+            <br>
+            <input type="text" name="Nombre" placeholder="Digite nombre">
+            <br>
+            <label>Ingrese los apellidos</label>
+            <br>
+            <input type="text" name="Apellidos" placeholder="Ingrese apellidos">
+            <br>
+            <label for="">Desea hacer una consulta</label>
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <br>
+            <label for="">Ingrese el género</label> 
+            <br>
+            <input type="radio" name="genero" value="Masculino"> <span class="text-genero">Masculino</span>
+            <br>
+            <input type="radio" name="genero" value="Masculino"> <span class="text-genero">Femenino</span>
+            <br>
+            <label for="">Seleccione las aerolíneas con las que le gustaría viajar: </label>
+            <br>
+            <input type="checkbox" name="aerolíneas" id=""><span class="text.opcion">Qatar Airways</span>
+            <input type="checkbox" name="aerolíneas" id=""><span class="text.opcion">Air New Zealand</span>
+            <input type="checkbox" name="aerolíneas" id=""><span class="text.opcion">Emirates</span>
+            <input type="checkbox" name="aerolíneas" id=""><span class="text.opcion">Singapore Airlines</span>
+            <label>Seleccione el destino</label>
+            <br>
+            <select class="select" name="destino">
+                <option value="Libano">Libia</option>
+                <option value="Palestina">Palestina</option>
+                <option value="irak">Irak</option>
+                <option value="irak">Siria</option>
+
+            </select>
+            <div class="btn-enviar">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

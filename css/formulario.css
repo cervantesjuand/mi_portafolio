@@ -1,0 +1,84 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+  font-family: 'Share Tech', sans-serif;
+h1 {
+    text-align: center;
+}
+form {
+    width: 600px;
+    height: 1100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.form-box {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+legend {
+    background-color: rgba(71, 156, 195);
+    color: white;
+    height: 50px;
+}
+.legend-text {
+    color: black;
+    text-align: center;
+    padding: 8px;
+    font-size: 1.5em;
+    font-weight: 90px;
+    font-family: 'Share Tech', sans-serif;
+}
+label {
+    display: inline-block;
+    color: rgb(48, 48, 48, .9);
+    margin-top: px;
+    font-size: 25px;
+    font-family: 'Share Tech', sans-serif;
+}
+input, option {
+    border: 2px solid black;
+    font-family: 'Share Tech', sans-serif;
+}
+label, input, textarea, button, select {
+    margin-left: 25px;
+    margin-top: 20px;
+
+}
+button {
+    justify-content: center;
+    border-radius: 10px;
+    font-family: 'Share Tech', sans-serif;
+}
+input[type="submit"] {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: block;
+    width: 500px;
+    height: 50px;
+    background-color: dodgerblue;
+    color: white;
+    margin-left: 5px;
+    font-size: 1.3em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+input[type="text"] {
+    border: 0;
+    border-bottom: 1px solid rgb(64, 64, 64, .9);
+}
+.btn-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+select {
+    padding: 10px;
+    border-radius: 4px;
+    color: rgb(48, 48, 48, .9);
+    cursor: pointer;
+}
+select:focus {
+    outline: none;
+}

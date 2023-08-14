@@ -1,0 +1,89 @@
+body {
+    background-image: url("../imagenes/dark.webp");
+    background-size: cover;
+    
+}
+.general {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 325px;
+}
+.box1 {
+    width: 215px;
+    height: 350px;
+}
+.nt {
+    width: 215px;
+    height: 350px;
+    border-radius: 15px;
+}
+.box2 {
+    width: 215px;
+    height: 350px;
+    margin-left: 25px;
+    border-radius: 15px;
+}
+.gm {
+    width: 215px;
+    height: 350px;
+    border-radius: 15px;
+}
+.box3 {
+    width: 215px;
+    height: 350px;
+    margin-left: 25px;
+    border-radius: 15px;
+}
+.di {
+    width: 215px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.general2{
+    display: flex;
+    margin-left: 370px;
+    margin-top: 20px;;
+}
+.boxa {
+    font-size: 25px;
+}
+.boxb {
+    font-size: 25px;
+    margin-top: 20px;
+   margin-left: 53px; 
+}
+.boxc {
+    font-size: 25px;
+   margin-left: 60px;
+}
+.net {
+    text-decoration: none;
+    font-family: Netflix;
+    color: red;
+    font-size: 50px;
+}
+@font-face {
+    font-family: Netflix;
+    src: url("../fuentes/netflix.ttf");
+}
+.game {
+    text-decoration: none;
+    font-family: Game;
+    color: gray;
+    font-size: 20px;
+}
+@font-face {
+    font-family: Game;
+    src: url("../fuentes/Game\ of\ Thrones.ttf");
+}
+.dis {
+    text-decoration: none;
+    font-family: disney;
+    color: aqua;
+    font-size: 40px;
+}
+@font-face {
+    font-family: disney;
+    src: url("../fuentes/disney.otf");
+}
