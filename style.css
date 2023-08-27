@@ -10,6 +10,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth 0.5s; /* Cambia la duración según tus preferencias */
+  }
+  
+
 body {
     background: #0c1022;
     color: #fff;
@@ -20,12 +26,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 10%;
+    padding: 22px 10%;
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background: #0a0d1d;
+    box-shadow: 10px white;
 }
 
 .logo {
@@ -59,7 +67,7 @@ body {
 
 .home {
    width: 100%;
-   height: 100vh;
+   height: 98vh;
    display: flex;
    align-items: center;
    /* justify-content: space-between; */
@@ -346,3 +354,94 @@ body {
         transform: translateY(0);
     }
 }
+
+.portfolio-content {
+    max-width: 100%;
+    height: 100vh;
+    padding: 70px 10% 0;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.projects {
+    margin-top: 40px;
+    max-width: 90%;
+    display: grid;
+    gap: 60px;
+    grid-template: "article-1 article-2 article-3" 300px
+                   "article-4 article-5 article-6 " 300px/
+                    400px     400px     400px     300px  
+}
+
+.article-1{
+    border-top-left-radius: 20px;
+    grid-area: article-1;
+    background-image: url("imagenes/query.gif");
+    background-repeat: no-repeat;
+}
+
+.article-2{
+    border-top-left-radius: 20px;
+    grid-area: article-2;
+    background-image: url("imagenes/submenu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.article-3{
+    border-top-left-radius: 20px;
+    grid-area: article-3;
+    background-image: url("imagenes/bac.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+.article-4{
+    border-top-left-radius: 20px;
+    grid-area: article-4;
+    background-image: url("imagenes/flex.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.article-5{
+    border-top-left-radius: 20px;
+    grid-area: article-5;
+    background-image: url("imagenes/calender.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+.article-6{
+    border-top-left-radius: 20px;
+    grid-area: article-6;
+    background-image: url("imagenes/maqueta.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.projects button {
+    margin-top: 61%;
+    margin-right: 30%;
+    margin-left: 30%;
+    width: 40%;
+    height: 35px;
+    border-radius: 10px;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.projects button:hover {
+    transform: scale(1.1);
+}
+
+
+
