@@ -378,7 +378,7 @@ h2 {
 .article-1{
     border-top-left-radius: 20px;
     grid-area: article-1;
-    background-image: url("/imagenes/query.gif");
+    background-image: url("imagenes/query.gif");
     background-repeat: no-repeat;
 }
 
