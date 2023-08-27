@@ -378,14 +378,14 @@ h2 {
 .article-1{
     border-top-left-radius: 20px;
     grid-area: article-1;
-    background-image: url("imagenes/query.gif");
+    background-image: url("../imagenes/query.gif");
     background-repeat: no-repeat;
 }
 
 .article-2{
     border-top-left-radius: 20px;
     grid-area: article-2;
-    background-image: url("imagenes/submenu.png");
+    background-image: url("../imagenes/submenu.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -393,7 +393,7 @@ h2 {
 .article-3{
     border-top-left-radius: 20px;
     grid-area: article-3;
-    background-image: url("imagenes/bac.jpg");
+    background-image: url("../imagenes/bac.jpg");
     background-size: cover;
     background-repeat: no-repeat;
    
@@ -402,7 +402,7 @@ h2 {
 .article-4{
     border-top-left-radius: 20px;
     grid-area: article-4;
-    background-image: url("imagenes/flex.png");
+    background-image: url("../imagenes/flex.png");
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -411,7 +411,7 @@ h2 {
 .article-5{
     border-top-left-radius: 20px;
     grid-area: article-5;
-    background-image: url("imagenes/calender.jpg");
+    background-image: url("../imagenes/calender.jpg");
     background-size: cover;
     background-repeat: no-repeat;
    
@@ -420,7 +420,7 @@ h2 {
 .article-6{
     border-top-left-radius: 20px;
     grid-area: article-6;
-    background-image: url("imagenes/maqueta.jpg");
+    background-image: url("../imagenes/maqueta.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     
