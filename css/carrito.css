@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.main-box{
+    padding: 20px;
+}
+.box-subtotal{
+    grid-area: subtotal;
+}
+.subtotal{
+    font-size: 1.6em;
+}
+#subTotal{
+    font-weight: 600;
+}
+.btn-pago-productos{
+    grid-area: btn-pago-productos;
+    background-color: rgb(246, 246, 87) ;
+    border-radius: 25px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.box-img-producto{
+    padding-top: 25px;
+    grid-area: box-img-producto;
+    width: 100%;
+}
+.img-producto{
+    width:100%;
+    padding: 10px;
+}
+.info-producto{
+    padding: 30px;
+    padding-top: 25px;
+    grid-area: info-producto;
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: column;
+}
+.texto-info-producto {
+    margin-bottom: 68px;
+}
+.num-select {
+    margin-top: 45px;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 100%;
+    display: grid;
+    grid-template: "num-restar num-view num-sumar" /
+                    1fr        1fr      1fr;  
+   
+}
+.num-restar, .num-sumar {
+    background-color: rgb(215, 215, 215);
+    cursor: pointer;
+}
+.num-restar, .num-sumar, .num-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+.num-restar {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.num-sumar {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+@media only screen and (min-width: 430px) and (max-width: 834px){
+    .main-box{
+        width: 100%;
+        height: 800px;
+        display: grid;
+        grid-template: "subtotal                subtotal" 50px
+                        "btn-pago-productos     btn-pago-productos" 70px            
+                        "box-img-producto       info-producto" 450px
+                        "btn-cantidad           btn-eliminar" 85px
+                        "empty-left             btn-save-later"70px/
+                        6fr                     8fr;
+    }
+}
+
