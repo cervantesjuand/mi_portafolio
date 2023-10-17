@@ -80,6 +80,19 @@
     border-bottom-right-radius: 15px;
 }
 
+.signo-pesos {
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.valor-unitario-producto {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.lab {
+    font-size: 29px;
+}
+
 
 @media only screen and (min-width: 430px) and (max-width: 834px){
     .main-box{
