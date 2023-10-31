@@ -1,7 +1,8 @@
 let inputBusqueda = document.getElementById('inputBusqueda');
+let mainContent = document.getElementById("mainContent");
 
 class Automovil {
-    constructor(marca, modelo, precio, imagen, año, km, ciudad){
+    constructor(marca, modelo, precio, imagen, año, km, ciudad) {
         this.marca = marca;
         this.modelo = modelo;
         this.precio = precio;
@@ -10,67 +11,80 @@ class Automovil {
         this.km = km;
         this.ciudad = ciudad;
     }
-};
+}
 
-let img = "../imagenes/alpacino.jpg";
+let img1 = "../imagenes/rangRover2.webp";
+let img2 = "../imagenes/bmw.jpg";
+let img3 = "../imagenes/mercedesg63.webp";
+let img4 = "../imagenes/mustang.webp";
 
-let auto1 = new Automovil("Rang Rover", "Velar-R 170 HP", 200000000, img, 2023, 20000, "Usaquén - Bogotá - Capítal " );
+let auto1 = new Automovil("Rang Rover", "Velar-R 170 HP", 200000000, img1, 2023, 20000, "Usaquén - Bogotá - Capítal");
+let auto2 = new Automovil("BMW", "M5", 250000000, img2, 2020, 100000, "Medellín - Antioquia - Poblado");
+let auto3 = new Automovil("Mercedes", "G63", 1070000000, img3, 2019, 50.6000, "Medellín - Antioquia - Poblado");
+let auto4 = new Automovil("Ford Mustang", "5.0 Premium", 167000000, img4, 2018, 29000, "Cota - Cundinamarca");
 
-// alert ( auto1.marca + " " + auto1.modelo); 
+let autos = [auto1, auto2, auto3, auto4];
 
-inputBusqueda.addEventListener("click", function(event){
-    // if (event.key == "Enter"){ 
-    let mainContent = document.getElementById("mainContent");
-    //caja producto
-    let boxProducto = document.createElement("div");
-    mainContent.appendChild(boxProducto);
-    boxProducto.setAttribute("class", "box-producto");
-    //caja imagen
-    let boxImg = document.createElement("div");
-    boxProducto.appendChild(boxImg);
-    boxImg.setAttribute("class", "box-img");
+inputBusqueda.addEventListener("input", function(event) {
+    let userInput = event.target.value.toLowerCase();
+    mainContent.innerHTML = ''; // Limpia el contenido anterior
 
-    let imgAuto = document.createElement("img");
-    boxImg.appendChild(imgAuto);
-    imgAuto.setAttribute("src", auto1.imagen);
-    imgAuto.setAttribute("class","img-auto");
+    for (let auto of autos) {
+        if (auto.marca.toLowerCase() === userInput) {
+            // Crea la caja de producto para el auto correspondiente
+            let boxProducto = document.createElement("div");
+            mainContent.appendChild(boxProducto);
+            boxProducto.setAttribute("class", "box-producto");
 
-    //caja información
-    let boxInfo = document.createElement("div");
-    boxProducto.appendChild(boxInfo);
-    boxInfo.setAttribute("class", "box-info");
+            // Caja imagen
+            let boxImg = document.createElement("div");
+            boxProducto.appendChild(boxImg);
+            boxImg.setAttribute("class", "box-img");
 
-    let marca = document.createElement("label");
-    boxInfo.appendChild(marca);
-    let txtNodeMarca = document.createTextNode(auto1.marca + "  " + auto1.modelo);
-    marca.appendChild(txtNodeMarca);
-    marca.setAttribute("class", "marca");
+            let imgAuto = document.createElement("img");
+            boxImg.appendChild(imgAuto);
+            imgAuto.setAttribute("src", auto.imagen);
+            imgAuto.setAttribute("class", "img-auto");
 
-    ///precio
-    let precio = document.createElement("label");
-    boxInfo.appendChild(precio);
-    //línea para convertir el número a formato de precio con . en los miles
-    let precioStr = Intl.NumberFormat("de-DE").format(auto1.precio);
-    let txtNodePrecio = document.createTextNode("$ "+ precioStr);
-    precio.appendChild(txtNodePrecio);
-    precio.setAttribute("class", "precio");
+            // Caja información
+            let boxInfo = document.createElement("div");
+            boxProducto.appendChild(boxInfo);
+            boxInfo.setAttribute("class", "box-info");
 
-    //año 
-    let año = document.createElement("label");
-    boxInfo.appendChild(año);
+            let marca = document.createElement("label");
+            boxInfo.appendChild(marca);
+            let txtNodeMarca = document.createTextNode(auto.marca + "  " + auto.modelo);
+            marca.appendChild(txtNodeMarca);
+            marca.setAttribute("class", "marca");
 
-    let txtNodeAño = document.createTextNode(`${auto1.año} Km ${auto1.km} ${auto1.ciudad}`)
-    año.appendChild(txtNodeAño)
-    año.setAttribute("class", "año")
+            // Precio
+            let precio = document.createElement("label");
+            boxInfo.appendChild(precio);
+            let precioStr = Intl.NumberFormat("de-DE").format(auto.precio);
+            let txtNodePrecio = document.createTextNode("$ " + precioStr);
+            precio.appendChild(txtNodePrecio);
+            precio.setAttribute("class", "precio");
 
-    //let icon
-    let boxCorazon = document.createElement("div");
-    boxImg.appendChild(boxCorazon);
-    let icon = document.createElement("i");
-    boxCorazon.appendChild(icon);
-    boxCorazon.setAttribute("class", "box-corazon");
-    icon.setAttribute("class", "icon-corazon fa-regular fa-heart");
+            // Año
+            let año = document.createElement("label");
+            boxInfo.appendChild(año);
 
-    //let linea
-    let lineaDiv = document.createElement("hr");
+            let txtNodeAño = document.createTextNode(`${auto.año} ${auto.km} km ${auto.ciudad}`);
+            año.appendChild(txtNodeAño);
+            año.setAttribute("class", "año");
+
+            // Icono de corazón
+            let boxCorazon = document.createElement("div");
+            boxImg.appendChild(boxCorazon);
+            let icon = document.createElement("i");
+            boxCorazon.appendChild(icon);
+            boxCorazon.setAttribute("class", "box-corazon");
+            icon.setAttribute("class", "icon-corazon fa-regular fa-heart");
+
+            // Línea divisoria
+            let lineaDiv = document.createElement("hr");
+
+            break; // Sale del bucle una vez que encuentra un auto correspondiente
+        }
+    }
 });

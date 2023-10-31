@@ -78,6 +78,7 @@ header {
 }
 
 .box-img {
+    height: 140px;
     grid-area: box-img;
     display: flex;
     justify-content: center;
@@ -88,13 +89,13 @@ header {
     grid-area: box-info;
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
-    
+    padding-top: 15px;
+    width: 220px;
     /* background-color: blueviolet; */
 }
 
 .img-auto {
-    width: 70%;
+    width: 79%;
     height: 70%;
 }
 
