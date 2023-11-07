@@ -25,66 +25,120 @@ let auto4 = new Automovil("Ford Mustang", "5.0 Premium", 167000000, img4, 2018, 
 
 let autos = [auto1, auto2, auto3, auto4];
 
-inputBusqueda.addEventListener("input", function(event) {
-    let userInput = event.target.value.toLowerCase();
-    mainContent.innerHTML = ''; // Limpia el contenido anterior
+    inputBusqueda.addEventListener("input", function(event) {
+        let userInput = event.target.value.toLowerCase();
+        mainContent.innerHTML = ''; // Limpia el contenido anterior
+
+        for (let auto of autos) {
+            if (userInput === '' || auto.marca.toLowerCase().includes(userInput)) {
+                // Crea la caja de producto para el auto correspondiente
+                let boxProducto = document.createElement("div");
+                mainContent.appendChild(boxProducto);
+                boxProducto.setAttribute("class", "box-producto");
+
+                // Caja imagen
+                let boxImg = document.createElement("div");
+                boxProducto.appendChild(boxImg);
+                boxImg.setAttribute("class", "box-img");
+
+                let imgAuto = document.createElement("img");
+                boxImg.appendChild(imgAuto);
+                imgAuto.setAttribute("src", auto.imagen);
+                imgAuto.setAttribute("class", "img-auto");
+
+                // Caja información
+                let boxInfo = document.createElement("div");
+                boxProducto.appendChild(boxInfo);
+                boxInfo.setAttribute("class", "box-info");
+
+                let marca = document.createElement("label");
+                boxInfo.appendChild(marca);
+                let txtNodeMarca = document.createTextNode(auto.marca + "  " + auto.modelo);
+                marca.appendChild(txtNodeMarca);
+                marca.setAttribute("class", "marca");
+
+                // Precio
+                let precio = document.createElement("label");
+                boxInfo.appendChild(precio);
+                let precioStr = Intl.NumberFormat("de-DE").format(auto.precio);
+                let txtNodePrecio = document.createTextNode("$ " + precioStr);
+                precio.appendChild(txtNodePrecio);
+                precio.setAttribute("class", "precio");
+
+                // Año
+                let año = document.createElement("label");
+                boxInfo.appendChild(año);
+
+                let txtNodeAño = document.createTextNode(`${auto.año} ${auto.km} km ${auto.ciudad}`);
+                año.appendChild(txtNodeAño);
+                año.setAttribute("class", "año");
+
+                // Icono de corazón
+                let boxCorazon = document.createElement("div");
+                boxImg.appendChild(boxCorazon);
+                let icon = document.createElement("i");
+                boxCorazon.appendChild(icon);
+                boxCorazon.setAttribute("class", "box-corazon");
+                icon.setAttribute("class", "icon-corazon fa-regular fa-heart");
+
+                // Línea divisoria
+                let lineaDiv = document.createElement("hr");
+            }
+        }
+    });
+
 
     for (let auto of autos) {
-        if (auto.marca.toLowerCase() === userInput) {
-            // Crea la caja de producto para el auto correspondiente
-            let boxProducto = document.createElement("div");
-            mainContent.appendChild(boxProducto);
-            boxProducto.setAttribute("class", "box-producto");
+        
+        let boxProducto = document.createElement("div");
+        mainContent.appendChild(boxProducto);
+        boxProducto.setAttribute("class", "box-producto");
 
-            // Caja imagen
-            let boxImg = document.createElement("div");
-            boxProducto.appendChild(boxImg);
-            boxImg.setAttribute("class", "box-img");
+        // Caja imagen
+        let boxImg = document.createElement("div");
+        boxProducto.appendChild(boxImg);
+        boxImg.setAttribute("class", "box-img");
 
-            let imgAuto = document.createElement("img");
-            boxImg.appendChild(imgAuto);
-            imgAuto.setAttribute("src", auto.imagen);
-            imgAuto.setAttribute("class", "img-auto");
+        let imgAuto = document.createElement("img");
+        boxImg.appendChild(imgAuto);
+        imgAuto.setAttribute("src", auto.imagen);
+        imgAuto.setAttribute("class", "img-auto");
 
-            // Caja información
-            let boxInfo = document.createElement("div");
-            boxProducto.appendChild(boxInfo);
-            boxInfo.setAttribute("class", "box-info");
+        // Caja información
+        let boxInfo = document.createElement("div");
+        boxProducto.appendChild(boxInfo);
+        boxInfo.setAttribute("class", "box-info");
 
-            let marca = document.createElement("label");
-            boxInfo.appendChild(marca);
-            let txtNodeMarca = document.createTextNode(auto.marca + "  " + auto.modelo);
-            marca.appendChild(txtNodeMarca);
-            marca.setAttribute("class", "marca");
+        let marca = document.createElement("label");
+        boxInfo.appendChild(marca);
+        let txtNodeMarca = document.createTextNode(auto.marca + "  " + auto.modelo);
+        marca.appendChild(txtNodeMarca);
+        marca.setAttribute("class", "marca");
 
-            // Precio
-            let precio = document.createElement("label");
-            boxInfo.appendChild(precio);
-            let precioStr = Intl.NumberFormat("de-DE").format(auto.precio);
-            let txtNodePrecio = document.createTextNode("$ " + precioStr);
-            precio.appendChild(txtNodePrecio);
-            precio.setAttribute("class", "precio");
+        // Precio
+        let precio = document.createElement("label");
+        boxInfo.appendChild(precio);
+        let precioStr = Intl.NumberFormat("de-DE").format(auto.precio);
+        let txtNodePrecio = document.createTextNode("$ " + precioStr);
+        precio.appendChild(txtNodePrecio);
+        precio.setAttribute("class", "precio");
 
-            // Año
-            let año = document.createElement("label");
-            boxInfo.appendChild(año);
+        // Año
+        let año = document.createElement("label");
+        boxInfo.appendChild(año);
 
-            let txtNodeAño = document.createTextNode(`${auto.año} ${auto.km} km ${auto.ciudad}`);
-            año.appendChild(txtNodeAño);
-            año.setAttribute("class", "año");
+        let txtNodeAño = document.createTextNode(`${auto.año} ${auto.km} km ${auto.ciudad}`);
+        año.appendChild(txtNodeAño);
+        año.setAttribute("class", "año");
 
-            // Icono de corazón
-            let boxCorazon = document.createElement("div");
-            boxImg.appendChild(boxCorazon);
-            let icon = document.createElement("i");
-            boxCorazon.appendChild(icon);
-            boxCorazon.setAttribute("class", "box-corazon");
-            icon.setAttribute("class", "icon-corazon fa-regular fa-heart");
+        // Icono de corazón
+        let boxCorazon = document.createElement("div");
+        boxImg.appendChild(boxCorazon);
+        let icon = document.createElement("i");
+        boxCorazon.appendChild(icon);
+        boxCorazon.setAttribute("class", "box-corazon");
+        icon.setAttribute("class", "icon-corazon fa-regular fa-heart");
 
-            // Línea divisoria
-            let lineaDiv = document.createElement("hr");
-
-            break; // Sale del bucle una vez que encuentra un auto correspondiente
-        }
+        // Línea divisoria
+        let lineaDiv = document.createElement("hr");
     }
-});
