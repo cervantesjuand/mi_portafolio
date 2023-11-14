@@ -27,13 +27,13 @@ let autos = [auto1, auto2, auto3, auto4];
 
     inputBusqueda.addEventListener("input", function(event) {
         let userInput = event.target.value.toLowerCase();
-        mainContent.innerHTML = ''; // Limpia el contenido anterior
+        boxProductos.innerHTML = ''; // Limpia el contenido anterior
 
         for (let auto of autos) {
             if (userInput === '' || auto.marca.toLowerCase().includes(userInput)) {
                 // Crea la caja de producto para el auto correspondiente
                 let boxProducto = document.createElement("div");
-                mainContent.appendChild(boxProducto);
+                boxProductos.appendChild(boxProducto);
                 boxProducto.setAttribute("class", "box-producto");
 
                 // Caja imagen
@@ -91,7 +91,7 @@ let autos = [auto1, auto2, auto3, auto4];
     for (let auto of autos) {
         
         let boxProducto = document.createElement("div");
-        mainContent.appendChild(boxProducto);
+        boxProductos.appendChild(boxProducto);
         boxProducto.setAttribute("class", "box-producto");
 
         // Caja imagen
@@ -142,3 +142,20 @@ let autos = [auto1, auto2, auto3, auto4];
         // Línea divisoria
         let lineaDiv = document.createElement("hr");
     }
+
+    let boxToggle = document.getElementById('boxToggle');
+    let buttonToggle = document.getElementById('buttonToggle');
+    
+    boxToggle.addEventListener("click", () => {
+        if(boxToggle.classList.contains("box-toggle-off")) {
+            boxToggle.classList.add("box-toggle-on");
+            boxToggle.classList.remove("box-toggle-off");
+            buttonToggle.classList.add("button-toggle-on");
+            buttonToggle.classList.remove("button-toggle-off");
+        }else{
+            boxToggle.classList.remove("box-toggle-on");
+            boxToggle.classList.add("box-toggle-off");
+            buttonToggle.classList.remove("button-toggle-on");
+            buttonToggle.classList.add("button-toggle-off");
+        }
+    });
