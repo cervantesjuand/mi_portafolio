@@ -11,14 +11,14 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-behavior: smooth 0.5s; /* Cambia la duración según tus preferencias */
-  }
+  scroll-behavior: smooth;
+}
   
 
 body {
     background: #0c1022;
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -441,6 +441,131 @@ h2 {
 
 .projects button:hover {
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        padding: 15px 10%;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .navbar a {
+        font-size: 18px;
+    }
+
+    .home {
+        padding: 70px 2% 0;
+     }
+     
+     .home-content {
+         margin-left: 0px;
+         width: 470px;
+     }
+     
+     .home-content h1 {
+        margin-top: 20px;
+         font-size: 33px;
+     }
+     
+     .home-content h3 {
+         font-size: 27px;
+     }
+     
+     .home-content p {
+         font-size: 14px;
+         margin: 20px 0 40px;
+     }
+     
+     .btn {
+         width: 140px;
+         height: 40px;
+         border-radius: 40px;
+         font-size: 19px;
+     }
+     .home-sci a {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 40px;
+         height: 40px;
+         background: linear-gradient(45deg, #f06, #3cf, #f06);
+         border-radius: 50%;
+         font-size: 20px;
+         color: #fff;
+         margin: 20px 70px;
+         z-index: 1;
+     }
+
+     .home-img {
+        width: 410px;
+        height: 410px;
+        margin-left: 40px;
+        opacity: 0;
+        animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+        animation-delay: 2.1s, 3.1s;
+    }
+    
+    .home-img .glowing-circle {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home-img .glowing-circle::after {
+        content: '';
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        background: #0c1022;
+        border-radius: 50%;
+        
+    }
+    
+    .glowing-circle span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#f06, #3cf, #f06);
+        border-radius: 50%;
+    }
+    
+    .glowing-circle span:nth-child(1) {
+        filter: blur(10px);
+    }
+    
+    .glowing-circle .image {
+        position: relative;
+        width: 380px;
+        height: 380px;
+        
+        border-radius: 50%;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+     h2 {
+        font-size: 2.3em;
+    }
+    
+
+     .projects {
+        margin-top: 30px;
+        max-width: 90%;
+        display: grid;
+        gap: 30px;
+        grid-template: "article-1 article-2 article-3" 220px
+                       "article-4 article-5 article-6 " 220px/
+                        270px     270px     270px 
+    }
+    
 }
 
 
