@@ -135,13 +135,7 @@
     }   
 
     .filtros-visible {
-        width: 100%;
-        height: 100%;
-        /* position: fixed; */
-        z-index: 10;
-        top: 0;
-        left: 0;
-        background-color: rgba(235, 235, 235);
+        display: none;
     }
 
     @media only screen and (min-width: 550px) {
@@ -181,5 +175,37 @@
             left: 63px;
             transition: left 300ms;
         }
+
+        .filtros-visible {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /* position: fixed; */
+            z-index: 10;
+            top: 0;
+            left: 0;
+            background-color: rgba(235, 235, 235);
+        }
+
+        .box-stars {
+            margin-left: 180px;
+            width: 400px;
+            height: 100px;
+            display: flex;
+            gap: 15px;
+            background-color: #faf25c;
+        }
+
+        .box-stars input {
+            height: 25px;
+            width: 120px;
+        }
+
+        .box-stars .button {
+            height: 25px;
+            width: 48px;
+        }
+
 
     }

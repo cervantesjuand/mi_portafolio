@@ -131,13 +131,10 @@ let autos = [auto1, auto2, auto3, auto4];
         año.appendChild(txtNodeAño);
         año.setAttribute("class", "año");
 
-        // Icono de corazón
-        let boxCorazon = document.createElement("div");
-        boxImg.appendChild(boxCorazon);
-        let icon = document.createElement("i");
-        boxCorazon.appendChild(icon);
-        boxCorazon.setAttribute("class", "box-corazon");
-        icon.setAttribute("class", "icon-corazon fa-regular fa-heart");
+        //Estrellas
+        let boxStar = document.createElement("div");
+        boxInfo.appendChild(boxStar);
+        boxStar.setAttribute("class", "box-star");
 
         // Línea divisoria
         let lineaDiv = document.createElement("hr");
