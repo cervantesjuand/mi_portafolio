@@ -36,11 +36,11 @@ btnGraficar.addEventListener("click", () => {
   `;
   
   document.getElementById("resultado").innerHTML = `
-    ${generateRatingElement(1, porcentaje1, 'yellow')}
-    ${generateRatingElement(2, porcentaje2, 'yellow')}
-    ${generateRatingElement(3, porcentaje3, 'yellow')}
-    ${generateRatingElement(4, porcentaje4, 'yellow')}
-    ${generateRatingElement(5, porcentaje5, 'yellow')}
+    ${generateRatingElement(1, porcentaje1, 'orange')}
+    ${generateRatingElement(2, porcentaje2, 'orange')}
+    ${generateRatingElement(3, porcentaje3, 'orange')}
+    ${generateRatingElement(4, porcentaje4, 'orange')}
+    ${generateRatingElement(5, porcentaje5, 'orange')}
   `;
   
 })
