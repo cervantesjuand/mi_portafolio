@@ -411,10 +411,8 @@ h2 {
 .article-5{
     border-top-left-radius: 20px;
     grid-area: article-5;
-    background-image: url("imagenes/calender.jpg");
+    background-image: url("imagenes/amazon.jpg  ");
     background-size: cover;
-    background-repeat: no-repeat;
-   
 }
 
 .article-6{
